@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>個人資料｜輔仁大學 琴房借用系統</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="profile">
+  <div id="site-header"></div>
+
+  <main class="container page">
+    <section class="page-head">
+      <h1>個人資料</h1>
+      <p>修改您自己的姓名、聯絡方式與密碼。帳號與角色權限由管理者統一設定。</p>
+    </section>
+
+    <div class="card" style="padding:24px;max-width:720px">
+      <form id="profileForm" autocomplete="off">
+        <div class="form-row">
+          <div class="field"><label>帳號</label><input type="text" id="pUsername" readonly></div>
+          <div class="field"><label>角色</label><input type="text" id="pRole" readonly></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>姓名</label><input type="text" name="name" id="pName" required></div>
+          <div class="field"><label>聯絡電話（選填）</label><input type="tel" name="phone" id="pPhone"></div>
+        </div>
+        <div class="field"><label>電子信箱（選填）</label><input type="email" name="email" id="pEmail"></div>
+
+        <h3 style="margin:22px 0 6px">變更密碼</h3>
+        <p style="color:#777;margin:0 0 10px">不想變更密碼，以下三格請留空。</p>
+        <div class="field"><label>舊密碼</label><input type="password" name="oldPassword" autocomplete="current-password"></div>
+        <div class="form-row">
+          <div class="field"><label>新密碼（至少 6 個字元）</label><input type="password" name="newPassword" autocomplete="new-password"></div>
+          <div class="field"><label>再次輸入新密碼</label><input type="password" name="confirmPassword" autocomplete="new-password"></div>
+        </div>
+
+        <button class="btn btn-primary" type="submit" id="saveBtn">儲存變更</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="data/mock.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
