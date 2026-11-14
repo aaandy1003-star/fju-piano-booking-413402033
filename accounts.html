@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>帳號管理｜輔仁大學 琴房借用系統</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="accounts">
+  <div id="site-header"></div>
+
+  <main class="container page">
+    <section class="page-head">
+      <h1>帳號管理</h1>
+      <p>新增、修改、刪除教師與管理者帳號，並設定各自可使用的功能權限。</p>
+    </section>
+
+    <div class="toolbar card">
+      <button class="btn btn-primary" id="newBtn">＋ 新增帳號</button>
+      <input type="search" id="searchBox" placeholder="搜尋帳號或姓名…" class="search">
+    </div>
+
+    <div class="card table-card">
+      <div id="accountList"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="data/mock.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/accounts.js"></script>
+</body>
+</html>
