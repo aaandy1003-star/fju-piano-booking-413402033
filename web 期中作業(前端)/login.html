@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登入｜輔仁大學 琴房借用系統</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="login" class="login-body">
+  <div id="site-header"></div>
+
+  <main class="login-page">
+    <div class="container login-hero">
+      <div class="login-visual" aria-hidden="true">
+        <span>Play · Practice · Perform</span>
+      </div>
+
+      <div class="login-panel">
+        <div class="login-title">
+          <img src="assets/logo.jpg" alt="輔仁大學校徽" width="84" height="84" style="object-fit: contain; flex: none;">
+          <div>
+            <h2 class="en">Piano Room Booking</h2>
+            <h3>歡迎使用琴房借用系統</h3>
+            <p>請輸入您的帳號 / 密碼登入</p>
+          </div>
+        </div>
+
+        <form id="loginForm" class="login-card" novalidate>
+          <label for="username">帳號：</label>
+          <input id="username" name="username" autocomplete="username" required>
+
+          <label for="password">密碼：</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+          <div class="login-actions">
+            <span id="loginError" class="login-error" hidden>登入失敗</span>
+            <button class="btn-login" type="submit"><span class="label">登入</span> <b>›</b></button>
+          </div>
+        </form>
+
+        <div class="demo-hint">
+          <strong>期中展示用帳號（點擊自動填入）</strong>
+          <button type="button" class="chip-btn" data-u="admin" data-p="admin123">管理者 admin</button>
+          <button type="button" class="chip-btn" data-u="teacher" data-p="teacher123">教師 teacher</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="data/mock.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
